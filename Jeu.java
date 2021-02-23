@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
 
-
+//mettre a jour sur github
 public class Jeu {
     public static void main(String[] args) {
         var scanner = new Scanner(System.in);
@@ -17,24 +17,24 @@ public class Jeu {
             switch (Integer.parseInt(scanner.nextLine())) {
                 case 1:
                     Random rand = new Random();
-                    int randomInteger;
-                    randomInteger = rand.nextInt(10) + 1;
+                    int random;
+                    random = rand.nextInt(10) + 1;
 
                     var nombreDeTentatives  = tentatives;
                     System.out.println("Deviner le nombre entre 0 et 100 !");
                     while (nombreDeTentatives > 0) {
                         System.out.println(nombreDeTentatives-- + " tentatives restantes:");
                         var input = Integer.parseInt(scanner.nextLine());
-                        if (input == randomInteger)
+                        if (input == random)
                             break;
                         else
-                            System.out.println("Le nombre est" + (input < randomInteger ? " plus grand" : " plus petit"));
+                            System.out.println("Le nombre est" + (input < random ? " plus grand" : " plus petit"));
                     }
                     if (nombreDeTentatives > 0)
                         System.out.println("C'est gagné");
                     else {
                         System.out.println("Perdu");
-                        System.out.println("Le nombre était " + randomInteger);
+                        System.out.println("Le nombre était " + random);
                     }
                     break;
 
